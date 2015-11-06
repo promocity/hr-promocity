@@ -5,12 +5,11 @@
   	<meta charset="utf-8">
   	<link href="css/normalize.css" rel="stylesheet">
   	<link href="css/style.css" rel="stylesheet">
-  	<link href="css/owl.carousel.css" rel="stylesheet">
   </head>
 
   <body>
 
-  	<header class="main-header">
+  	<header class="main-header contacts-main-header">
   		<div class="container">
   		  <div class="main-header-container clearfix">
 	  		<div class="main-header-logo"></div>
@@ -51,10 +50,47 @@
 	  				</li>
 	  			</ul>
 	  		</nav>
-
-	  		<h1>Агенство<br> по подбору персонала<br> в Екатеринбурге</h1>
       </div>
   	</header>
+
+  	<main>
+  		<div class="map">
+				<div class="map-canvas" id="map-canvas"></div>
+				<div class="map-content">
+
+				  <div class="map-content-container clearfix">
+					  <div class="map-content-col-1">
+
+	            <span>Адрес</span>
+	            <span>
+	              Екатеринбург<br>
+	              Чернышевского, 16<br>
+	              офис 220
+	            </span>
+
+					  	<span>Контакты</span>
+	            <span>
+	              +7 900 000 00 00<br>
+	              info@yandex.ru
+	            </span>
+					  </div>
+
+	          <div class="map-content-col-2">
+	          	<form class="map-content-form" action="/echo" method="post">
+	          		<div class="map-form-container">
+	          			<div class="map-form-title">Форма обратной связи</div>
+	          			<input type="text" name="name" placeholder="Имя">
+	          			<input type="tel" name="tel" placeholder="Телефон">
+	          			<textarea placeholder="Текст сообщения"></textarea>
+	          		</div>
+	          		<button class="btn map-form-btn" type="submit">Отправить</button>
+	          	</form>
+	          </div>
+
+          </div>
+				</div>    
+			</div>
+  	</main>
 
   	<footer class="main-footer">
   	  <div class="container">
@@ -111,6 +147,27 @@
 	  	  </div>
   	  </div>	
   	</footer>
+
+  	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+		<script>
+			function initialize() {
+			  var mapOptions = {
+			    zoom: 17,
+			    scrollwheel: false,
+			    center: new google.maps.LatLng(56.8314221,60.6023303)
+			  }
+			  var map = new google.maps.Map(document.getElementById("map-canvas"),
+									                                mapOptions);
+			  var image = "images/map-marker.png";
+			  var myLatLng = new google.maps.LatLng(56.8314221,60.6020815);
+			  var beachMarker = new google.maps.Marker({
+			    position: myLatLng,
+			    map: map,
+			    icon: image
+			  });
+			}
+			google.maps.event.addDomListener(window, "load", initialize);
+		</script>
 
   </body>	
 </html>

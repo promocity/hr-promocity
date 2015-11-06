@@ -1,9 +1,11 @@
 body {
 	min-width:1200px;
 
-  font-family:Tahoma, "Arial" , sans-serif;
+  font-family:Tahoma, sans-serif;
 
 	color:#000;
+
+	overflow-x:hidden;
 }
 
 h1 {
@@ -23,6 +25,9 @@ h1 {
 
 	clear:both;
 }
+
+
+/*Header*/
 
 
 .main-header{
@@ -145,7 +150,10 @@ h1 {
 }
 
 
+/*Главная*/
 
+
+/*Блок со слайдерами*/
 
 
 .index-hr-list {
@@ -173,6 +181,10 @@ h1 {
 
   background:url("../img/index-hr-list-shadow.png") no-repeat;
 }
+
+
+/*Корусель*/
+
 
 .owl-prev {
 	position: absolute;
@@ -240,6 +252,9 @@ h1 {
 .hr-list-col-left .owl-dot.active {
 	background:#51829e;
 }
+
+
+
 
 .vacancy-card {
 	width:574px;
@@ -497,8 +512,7 @@ h1 {
 }
 
 
-
-
+/*Промоблок*/
 
 
 .index-promo-block {
@@ -568,7 +582,7 @@ h1 {
 }
 
 
-
+/*Блок преимуществ*/
 
 
 .index-features-block {
@@ -745,7 +759,7 @@ h1 {
 }
 
 
-
+/*Блок полезных статей*/
 
 
 .index-articles-block {
@@ -841,6 +855,211 @@ h1 {
 
 
 
+
+
+/*Контакты*/
+
+
+.contacts-main-header {
+  position:relative;
+  z-index:10;
+
+	background:rgba(0, 0, 0, 0.5);
+}
+
+.contacts-main-header .main-navigation {
+  position: relative;	
+  z-index: 10;
+
+	margin-bottom:-20px;
+
+	background:#004b75;
+	opacity:1;   
+}
+
+.map {
+	position:relative;
+
+	width:100%;
+  height:600px;
+}
+
+.map-canvas {
+	position:absolute;
+	top:-103px;
+
+  width:2000px;
+  height:700px;
+
+  background:#999;
+}
+
+.map-content {
+	position:absolute;
+	bottom:0;
+
+	width:100%;
+	margin:0 auto;
+
+	background:rgba(255, 255, 255, 0.8);
+}
+
+.map-content-container {
+  width:780px; 
+  padding-top:37px;
+  padding-bottom:50px;
+  margin:0 auto;
+}
+
+.map-content-col-1 {
+	width:199px;
+	padding-left:21px;
+  margin-right:100px;	
+	float:left;
+}
+
+.map-content-col-1 span {
+	position:relative;
+
+	margin-bottom:36px;
+	display:inline-block;
+	vertical-align:bottom;
+
+	font-size:18px;
+	line-height:23px;
+
+	color:#6a6868;
+}
+
+.map-content-col-1 span:nth-of-type(1)::after {
+	content:"";
+
+	position:absolute;
+	top:0;
+	left:-41px;
+
+	width:22px;
+	height:28px;
+
+	background:url("../img/contacts-sprite.png") no-repeat -65px -15px;
+}
+
+.map-content-col-1 span:nth-of-type(3)::after {
+	content:"";
+
+	position:absolute;
+	top:0;
+	left:-41px;
+
+	width:22px;
+	height:28px;
+
+	background:url("../img/contacts-sprite.png") no-repeat -15px -15px;
+}
+
+.map-content-col-1 span:last-child {
+	margin-bottom:0;
+}
+
+.map-content-col-1 span:nth-child(odd) {
+	margin-bottom:5px;
+  display:block;
+
+  font-size:18px;
+  font-weight:bold;
+  text-transform:uppercase;
+
+  color:#004b75;
+}
+
+.map-content-col-2 {
+	width:420px;
+  padding-bottom:13px;	
+	padding-left:20px;
+	float:left;
+}
+
+.map-form-title {
+	font-size:18px;
+	line-height:23px;
+	font-weight:bold;
+	text-transform:uppercase;
+
+	color:#004b75;
+}
+
+.map-form-container {
+	width:254px;
+	margin-right:21px;
+	display:inline-block;
+	vertical-align:bottom;
+}
+
+.map-form-container input {
+	width:100%;
+	padding:0 10px;
+	padding-top:2px;
+	margin:0;
+	margin-bottom:7px;
+  display:block;	
+	
+	background:#f0f0f0;
+	border:1px solid #c7c6c5;
+	border-radius:5px;
+
+	box-sizing:border-box;
+}
+
+::-webkit-input-placeholder {font-size:12px; vertical-align:middle;}
+::-moz-placeholder          {font-size:12px; vertical-align:middle;}/* Firefox 19+ */
+:-moz-placeholder           {font-size:12px; vertical-align:middle;}/* Firefox 18- */
+:-ms-input-placeholder      {font-size:12px; vertical-align:middle;}
+
+.map-form-container input:first-of-type {
+  margin-top:6px;
+}
+
+.map-form-container input:focus {
+	border:1px solid #004b75;
+	border-radius:5px;
+  outline:none;
+}
+
+.map-form-container textarea {
+	width:100%;
+	height:115px;
+	padding:10px;
+	margin:0;
+	
+	background:#f0f0f0;
+	border:1px solid #c7c6c5;
+	border-radius:5px;
+
+	box-sizing:border-box;
+}
+
+.map-form-container textarea:focus {
+	border:1px solid #004b75;
+	border-radius:5px;
+  outline:none;
+}
+
+.map-form-btn {
+	width:140px;
+	padding:5px 0;
+  margin-bottom:3px;	
+	display:inline-block;
+	vertical-align:bottom;
+
+	font-size:16px;
+	line-height:23px;
+	font-weight:normal;
+
+	background:transparent;
+}
+
+
+/*Footer*/
 
 
 .main-footer {
